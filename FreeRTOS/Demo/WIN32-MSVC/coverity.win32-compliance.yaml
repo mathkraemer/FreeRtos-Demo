@@ -4,10 +4,10 @@ capture:
   languages:
     exclude: [javascript, java, php, ruby, python]
   files:
-    exclude-glob: '*.obj' 
-#  build:
-#    build-command: "C:\\PROGRA~1\\MIB055~1\\2022\\Professional\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe" /t:Rebuild WIN32.sln
-#    cov-build-args: [--parallel-translate=4, --parallel-emit]
+    exclude-glob: '*.obj'
+  build:
+    build-command: "C:\\PROGRA~1\\MIB055~1\\2022\\Professional\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe" /t:Rebuild WIN32.sln
+    cov-build-args: [--parallel-translate=4, --parallel-emit]
   
 analyze:
   aggressiveness-level: low
