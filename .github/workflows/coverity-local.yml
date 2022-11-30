@@ -43,8 +43,8 @@ jobs:
         if: ${{ github.event_name == 'pull_request' }}
         shell: cmd
         run: |
-          echo ${{ steps.changeset.outputs.added_modified }}
-          type ${{ steps.changeset.outputs.added_modified }}
+          echo ${{ steps.files.outputs.all }}
+          type ${{ steps.files.outputs.all }}
           echo ==================================================================
           cov-run-desktop --dir T:\GitHub\freertos-desktop-idir FreeRTOS/Source/tasks.c
 
