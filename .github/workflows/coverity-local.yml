@@ -37,8 +37,7 @@ jobs:
         if: ${{ github.event_name == 'pull_request' }}
         id: changeset
         uses: jitterbit/get-changed-files@v1
-        with:
-          format: 'csv'
+
 
       # Commands to perform changeset analysis
       - name: Synopsys Coverity Scan (Changeset Analysis)
