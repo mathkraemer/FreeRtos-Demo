@@ -16,7 +16,7 @@ analyze:
   c-cpp-virtual: false
   cov-analyze-args: [
     --disable-spotbugs,
-    --strip-path, /Tools/GitHub/actions-runner/_work ]
+    --strip-path, /Tools/GitHub/actions-runner/_work/FreeRtos-Demo/FreeRtos-Demo ]
   checkers:
     all: true
     checker-config:
