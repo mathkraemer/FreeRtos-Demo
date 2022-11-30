@@ -37,6 +37,8 @@ jobs:
         if: ${{ github.event_name == 'pull_request' }}
         id: changeset
         uses: jitterbit/get-changed-files@v1
+        with:
+          format: 'csv'
 
       # Runs a set of commands using the runners shell
       - name: Synopsys Coverity Scan (Changeset Analysis)
@@ -46,8 +48,9 @@ jobs:
         shell: cmd
         run: |
           echo Set of changed files: %CHANGESET_FILES%
+          type %CHANGESET_FILES%
           pushd FreeRtos\Demo\WIN32-MSVC
           echo cov-run-desktop --dir T:\GitHub\freertos-desktop-idir --setup
           echo cov-run-desktop --dir T:\GitHub\freertos-desktop-idir ../../Source/queue.c
-          cov-run-desktop --dir T:\GitHub\freertos-desktop-idir %CHANGESET_FILES%
+          echo cov-run-desktop --dir T:\GitHub\freertos-desktop-idir %CHANGESET_FILES%
 
