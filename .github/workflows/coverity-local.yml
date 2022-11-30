@@ -41,6 +41,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Synopsys Coverity Scan (Changeset Analysis)
         if: ${{ github.event_name == 'pull_request' }}
+        shell: cmd
         run: |
           echo ${{ steps.changeset.outputs.added_modified }}
           type ${{ steps.changeset.outputs.added_modified }}
