@@ -46,6 +46,7 @@ jobs:
           echo ${{ steps.files.outputs.all }}
           type ${{ steps.files.outputs.all }}
           echo ==================================================================
+          pushd FreeRtos\Demo\WIN32-MSVC
           cov-run-desktop --dir T:\GitHub\freertos-desktop-idir --setup --skip-build
           cov-run-desktop --dir T:\GitHub\freertos-desktop-idir FreeRTOS/Source/tasks.c
 
