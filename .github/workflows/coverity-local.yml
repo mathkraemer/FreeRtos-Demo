@@ -45,10 +45,10 @@ jobs:
           CHANGESET_FILE: ${{ steps.changeset.outputs.added_modified }}
         shell: cmd
         run: |
-          echo %CHANGESET_FILE%
-          type %CHANGESET_FILE%
+          echo %%CHANGESET_FILE%%
+          type %%CHANGESET_FILE%%
           echo ==================================================================
           pushd FreeRtos\Demo\WIN32-MSVC
-          cov-run-desktop --dir T:\GitHub\freertos-desktop-idir --setup
-          cov-run-desktop --dir T:\GitHub\freertos-desktop-idir ../../Source/queue.c
+          echo cov-run-desktop --dir T:\GitHub\freertos-desktop-idir --setup
+          echo cov-run-desktop --dir T:\GitHub\freertos-desktop-idir ../../Source/queue.c
 
