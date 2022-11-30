@@ -28,7 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Capture a full build with Coverity
         if: ${{ github.event_name != 'pull_request' }}
-        run:  cd FreeRtos\Demo\WIN32-MSVC && coverity capture --config coverity.win32.yml
+        run:  cd FreeRtos\Demo\WIN32-MSVC && coverity capture --config coverity.win32-compliance.yaml
 
 
       # Runs a set of commands using the runners shell
