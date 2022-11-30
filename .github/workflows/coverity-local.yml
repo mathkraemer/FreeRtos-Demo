@@ -46,6 +46,6 @@ jobs:
           echo ${{ steps.files.outputs.all }}
           type ${{ steps.files.outputs.all }}
           echo ==================================================================
-          cov-manage-emit --dir T:\GitHub\freertos-desktop-idir setup --skip-build
+          cov-run-desktop --dir T:\GitHub\freertos-desktop-idir setup --skip-build
           cov-run-desktop --dir T:\GitHub\freertos-desktop-idir FreeRTOS/Source/tasks.c
 
