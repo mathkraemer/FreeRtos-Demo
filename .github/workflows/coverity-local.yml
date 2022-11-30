@@ -36,7 +36,7 @@ jobs:
       - name: Get Pull Request Changeset
         if: ${{ github.event_name == 'pull_request' }}
         id: changeset
-        uses: jitterbit/get-changed-file@v1
+        uses: jitterbit/get-changed-files@v1
 
       # Runs a set of commands using the runners shell
       - name: Synopsys Coverity Scan (Changeset Analysis)
