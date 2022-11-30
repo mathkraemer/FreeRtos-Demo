@@ -14,7 +14,9 @@ analyze:
   callgraph-metrics: true
   c-cpp-fnptr: true
   c-cpp-virtual: false
-  cov-analyze-args: [--disable-spotbugs]
+  cov-analyze-args: [
+    --disable-spotbugs,
+    --strip-path, /Tools/GitHub/actions-runner/_work ]
   checkers:
     all: true
     checker-config:
