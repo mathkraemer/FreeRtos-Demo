@@ -46,7 +46,9 @@ jobs:
         shell: cmd
         run: |
           echo Set of changed files: %CHANGESET_FILES%
-          type %CHANGESET_FILES%
+          for %%f in (%CHANGESET_FILES%) do (
+            echo %f
+          )
           pushd FreeRtos\Demo\WIN32-MSVC
           echo cov-run-desktop --dir T:\GitHub\freertos-desktop-idir --setup
           echo cov-run-desktop --dir T:\GitHub\freertos-desktop-idir ../../Source/queue.c
