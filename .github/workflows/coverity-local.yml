@@ -25,7 +25,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
+      # Baseline scanning
       - name: Synopsys Coverity Scan (Full Analysis)
         if: ${{ github.event_name != 'pull_request' }}
         shell: cmd
