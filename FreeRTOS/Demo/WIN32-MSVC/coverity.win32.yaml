@@ -14,7 +14,7 @@ analyze:
   callgraph-metrics: true
   c-cpp-fnptr: true
   c-cpp-virtual: false
-  cov-analyze-args: [--disable-spotbugs, --strip-path, d:\Projects\FreeRTOS\FreeRTOSv10.2.1]
+  cov-analyze-args: [--disable-spotbugs]
   checkers:
     all: true
     checker-config:

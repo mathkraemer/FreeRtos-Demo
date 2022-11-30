@@ -1,2 +1,0 @@
-P:\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\WIN32-MSVC\Debug\RTOSDemo.exe
-D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\WIN32-MSVC\Debug\RTOSDemo.exe
