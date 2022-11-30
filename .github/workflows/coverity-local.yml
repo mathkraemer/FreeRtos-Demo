@@ -31,7 +31,7 @@ jobs:
         shell: cmd
         run:  |
           pushd FreeRtos\Demo\WIN32-MSVC
-          coverity capture --config coverity.win32-compliance.yaml --dir T:\GitHub\freertos-idir
+          coverity scan --config coverity.win32-compliance.yaml --dir T:\GitHub\freertos-idir
 
 
       # Runs a set of commands using the runners shell
