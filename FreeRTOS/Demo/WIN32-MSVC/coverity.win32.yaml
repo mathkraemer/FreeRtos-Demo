@@ -1,0 +1,44 @@
+capture:
+  compiler-configuration:
+     cov-configure: [[--msvc]]
+  languages:
+    exclude: [javascript, java, php, ruby, python]
+  files:
+    exclude-glob: '*.obj' 
+  build:
+    build-command: C:\PROGRA~1\MIB055~1\2022\Professional\MSBuild\Current\Bin\amd64\MSBuild.exe /t:Rebuild WIN32.sln
+    cov-build-args: [--parallel-translate=4, --parallel-emit]
+  
+analyze:
+  aggressiveness-level: low
+  callgraph-metrics: true
+  c-cpp-fnptr: true
+  c-cpp-virtual: false
+  cov-analyze-args: [--disable-spotbugs, --strip-path, d:\Projects\FreeRTOS\FreeRTOSv10.2.1]
+  checkers:
+    all: true
+    checker-config:
+      INTEGER_OVERFLOW:
+        options:
+          enable_all_overflow_ops: true
+          trust_filesystem: false
+          trust_network: false
+      OVERRUN:
+        options:
+          report_underrun: true
+      STACK_USE:
+        options:
+          note_direct_recursion: true
+          note_indirect_recursion: true
+          max_total_use_bytes: 500
+  coding-standards:
+    ignore-deviated-findings: true
+    misrac2012:
+      file: D:\Projects\FreeRTOS\misrac2012-mandatory-required-his.json
+    cert-c:
+      pre-canned: L1-only
+
+commit:
+  connect:
+    stream: freertos-win32-debug-compliance
+    url: http://localhost:8080

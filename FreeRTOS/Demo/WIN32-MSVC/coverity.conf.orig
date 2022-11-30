@@ -1,0 +1,35 @@
+// Author: Matthias Kraemer, (c) Synopsys GmbH 2019
+
+{
+  "type": "Coverity configuration",
+  "format_version": 1,
+  "format_minor_version": 7,
+
+  "settings": {
+
+    "compiler_configurations": [
+      {
+        "cov_configure_args": ["--msvc"]
+      }
+    ],
+
+    "server": {
+      "url": "http://mkraemer-5520:8080"
+    },
+
+    "stream": "freertos-win32-debug-misrac",
+
+    "cov_run_desktop": {
+
+      //"clean_cmd": ["clean", "up"], // (clean option 1)
+      
+      //"build_cmd": ["C:\\PROGRA~2\\MICROS~3\\2017\\Professional\\MSBuild\\15.0\\Bin\\MSBuild.exe", "/t:rebuild", "/p:Configuration=Debug", "/p:Platform=Win32", "Win32.sln"],
+      "reference_snapshot": "latest"
+    },
+
+
+    "ide": {
+      //"build_strategy": "IDE"
+    }
+  }
+}

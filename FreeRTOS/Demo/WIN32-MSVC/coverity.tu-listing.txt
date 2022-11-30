@@ -1,0 +1,166 @@
+[INFO] coverity 2022.3.0 covcli-2022.3-push-39
+[WARN] No setting for 'commit.connect.on-new-cert' specified.
+[WARN] Using default value of 'distrust'.
+[WARN] This may result in a certificate validation error when uploading defects to Coverity Connect.
+[WARN] If you trust the Coverity Connect instance and certificate validation fails, set 'commit.connect.on-new-cert' to 'trust'.
+[WARN] If you are unfamiliar with what this means, please talk to your Coverity Connect administrator.
+[INFO] Using Coverity Capture kit at: "c:\Products\ca202203\bin".
+Intermediate directory d:/Projects/FreeRTOS/FreeRTOSv10.2.1/FreeRTOS/Demo/WIN32-MSVC/idir is compatible
+[INFO] Telemetry is enabled
+===============================================================================
+Files for project file: d:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\WIN32-MSVC\WIN32.sln
+  File family: Configuration
+    File type: Text
+      Filename                                 Capture Status Code Lines Notes
+      Debug\WIN32.vcxproj.FileListAbsolute.txt Ignored
+      coverity.tu-listing.txt                  Ignored
+    File type: YAML
+      Filename      Capture Status Code Lines Notes
+      coverity.yaml Ignored
+      polaris.yml   Ignored
+  File family: Unknown
+    File type: Unknown
+      Filename                                    Capture Status Code Lines Notes
+      Debug\AbortDelay.obj                        Ignored
+      Debug\BlockQ.obj                            Ignored
+      Debug\EventGroupsDemo.obj                   Ignored
+      Debug\GenQTest.obj                          Ignored
+      Debug\IntSemTest.obj                        Ignored
+      Debug\MessageBufferAMP.obj                  Ignored
+      Debug\MessageBufferDemo.obj                 Ignored
+      Debug\PollQ.obj                             Ignored
+      Debug\QPeek.obj                             Ignored
+      Debug\QueueOverwrite.obj                    Ignored
+      Debug\QueueSet.obj                          Ignored
+      Debug\QueueSetPolling.obj                   Ignored
+      Debug\RTOSDemo.Build.CppClean.log           Ignored
+      Debug\RTOSDemo.exe.recipe                   Ignored
+      Debug\RTOSDemo.ilk                          Ignored
+      Debug\RTOSDemo.tlog\CL.command.1.tlog       Ignored
+      Debug\RTOSDemo.tlog\CL.read.1.tlog          Ignored
+      Debug\RTOSDemo.tlog\CL.write.1.tlog         Ignored
+      Debug\RTOSDemo.tlog\RTOSDemo.lastbuildstate Ignored
+      Debug\RTOSDemo.tlog\link.command.1.tlog     Ignored
+      Debug\RTOSDemo.tlog\link.read.1.tlog        Ignored
+      Debug\RTOSDemo.tlog\link.write.1.tlog       Ignored
+      Debug\Run-time-stats-utils.obj              Ignored
+      Debug\StaticAllocation.obj                  Ignored
+      Debug\StreamBufferDemo.obj                  Ignored
+      Debug\StreamBufferInterrupt.obj             Ignored
+      Debug\TaskNotify.obj                        Ignored
+      Debug\WIN32.pdb                             Ignored
+      Debug\blocktim.obj                          Ignored
+      Debug\countsem.obj                          Ignored
+      Debug\croutine.obj                          Ignored
+      Debug\death.obj                             Ignored
+      Debug\dynamic.obj                           Ignored
+      Debug\event_groups.obj                      Ignored
+      Debug\flop.obj                              Ignored
+      Debug\heap_5.obj                            Ignored
+      Debug\integer.obj                           Ignored
+      Debug\list.obj                              Ignored
+      Debug\main.obj                              Ignored
+      Debug\main_blinky.obj                       Ignored
+      Debug\main_full.obj                         Ignored
+      Debug\port.obj                              Ignored
+      Debug\queue.obj                             Ignored
+      Debug\recmutex.obj                          Ignored
+      Debug\semtest.obj                           Ignored
+      Debug\stream_buffer.obj                     Ignored
+      Debug\tasks.obj                             Ignored
+      Debug\timerdemo.obj                         Ignored
+      Debug\timers.obj                            Ignored
+      Debug\trcKernelPort.obj                     Ignored
+      Debug\trcSnapshotRecorder.obj               Ignored
+      Debug\vc142.idb                             Ignored
+      Debug\vc142.pdb                             Ignored
+      WIN32.vcxproj                               Ignored
+      WIN32.vcxproj.filters                       Ignored
+      WIN32.vcxproj.user                          Ignored
+      coverity.conf.orig                          Ignored
+End files for project file: d:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\WIN32-MSVC\WIN32.sln
+===============================================================================
+===============================================================================
+Files not in any project
+  File family: Source
+    File type: C
+      Filename                                         Capture Status Code Lines Notes
+      FreeRTOSConfig.h                                 Ignored
+      Run-time-stats-utils.c                           Ignored
+      Trace_Recorder_Configuration\trcConfig.h         Ignored
+      Trace_Recorder_Configuration\trcSnapshotConfig.h Ignored
+      main.c                                           Ignored
+      main_blinky.c                                    Ignored
+      main_full.c                                      Ignored
+  File family: Binary
+    File type: Exe
+      Filename           Capture Status Code Lines Notes
+      Debug\RTOSDemo.exe Ignored
+  File family: Configuration
+    File type: Properties
+      Filename             Capture Status Code Lines Notes
+      coverity.cert.conf   Ignored
+      coverity.conf        Ignored
+      coverity.misrac.conf Ignored
+End files not in any project
+===============================================================================
+===============================================================================
+Captured files outside of the project directory
+  File family: Source
+    File type: C
+      Filename                                                                                            Capture Status Code Lines Notes
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS-Plus\Source\FreeRTOS-Plus-Trace\trcKernelPort.c       Succeeded      474
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS-Plus\Source\FreeRTOS-Plus-Trace\trcSnapshotRecorder.c Succeeded      1793
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\Common\Minimal\AbortDelay.c                      Succeeded      408
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\Common\Minimal\BlockQ.c                          Succeeded      138
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\Common\Minimal\EventGroupsDemo.c                 Succeeded      541
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\Common\Minimal\GenQTest.c                        Succeeded      536
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\Common\Minimal\IntSemTest.c                      Succeeded      261
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\Common\Minimal\MessageBufferAMP.c                Succeeded      132
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\Common\Minimal\MessageBufferDemo.c               Succeeded      464
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\Common\Minimal\PollQ.c                           Succeeded      99
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\Common\Minimal\QPeek.c                           Succeeded      211
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\Common\Minimal\QueueOverwrite.c                  Succeeded      112
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\Common\Minimal\QueueSet.c                        Succeeded      392
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\Common\Minimal\QueueSetPolling.c                 Succeeded      76
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\Common\Minimal\StaticAllocation.c                Succeeded      517
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\Common\Minimal\StreamBufferDemo.c                Succeeded      566
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\Common\Minimal\StreamBufferInterrupt.c           Succeeded      104
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\Common\Minimal\TaskNotify.c                      Succeeded      309
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\Common\Minimal\TimerDemo.c                       Succeeded      631
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\Common\Minimal\blocktim.c                        Succeeded      265
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\Common\Minimal\countsem.c                        Succeeded      134
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\Common\Minimal\death.c                           Succeeded      87
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\Common\Minimal\dynamic.c                         Succeeded      224
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\Common\Minimal\flop.c                            Succeeded      190
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\Common\Minimal\integer.c                         Succeeded      73
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\Common\Minimal\recmutex.c                        Succeeded      205
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\Common\Minimal\semtest.c                         Succeeded      126
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\WIN32-MSVC\Run-time-stats-utils.c                Succeeded      31
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\WIN32-MSVC\main.c                                Succeeded      141
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\WIN32-MSVC\main_blinky.c                         Succeeded      85
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\WIN32-MSVC\main_full.c                           Succeeded      442
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Source\croutine.c                                     Succeeded      179
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Source\event_groups.c                                 Succeeded      457
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Source\list.c                                         Succeeded      73
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Source\portable\MSVC-MingW\port.c                     Succeeded      317
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Source\portable\MemMang\heap_5.c                      Succeeded      253
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Source\queue.c                                        Succeeded      1913
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Source\stream_buffer.c                                Succeeded      831
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Source\tasks.c                                        Succeeded      3160
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Source\timers.c                                       Succeeded      662
+  File family: Configuration
+    File type: Properties
+      Filename                                                                           Capture Status Code Lines Notes
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\WIN32-MSVC\coverity.cert.conf   Succeeded      21
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\WIN32-MSVC\coverity.conf        Succeeded      12
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\WIN32-MSVC\coverity.misrac.conf Succeeded      21
+    File type: Text
+      Filename                                                                                               Capture Status Code Lines Notes
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\WIN32-MSVC\Debug\WIN32.vcxproj.FileListAbsolute.txt Succeeded      1
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\WIN32-MSVC\coverity.tu-listing.txt                  Succeeded      166
+    File type: YAML
+      Filename                                                                  Capture Status Code Lines Notes
+      D:\Projects\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Demo\WIN32-MSVC\polaris.yml Succeeded      45
+End captured files outside of the project directory
+===============================================================================

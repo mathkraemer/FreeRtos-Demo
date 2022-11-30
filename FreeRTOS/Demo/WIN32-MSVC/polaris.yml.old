@@ -1,0 +1,45 @@
+version: "1"
+project:
+  name: MKM-FreeRtos-WIN32-MSVC
+  branch: master
+  revision:
+    name: WIN32-MSVC
+    date: "2022-04-06T14:23:13Z"
+capture:
+  build:
+    buildCommands:
+    - shell: [msbuild, WIN32.sln, '/t:Rebuild']
+  fileSystem:
+    ears:
+      extensions: [ear]
+      files:
+      - directory: ${project.projectDir}
+    java:
+      files:
+      - directory: ${project.projectDir}
+    javascript:
+      files:
+      - directory: ${project.projectDir}
+      - excludeRegex: node_modules|bower_components|vendor
+    php:
+      files:
+      - directory: ${project.projectDir}
+    python:
+      files:
+      - directory: ${project.projectDir}
+    ruby:
+      files:
+      - directory: ${project.projectDir}
+    typescript:
+      files:
+      - directory: ${project.projectDir}
+    wars:
+      extensions: [war]
+      files:
+      - directory: ${project.projectDir}
+analyze:
+  mode: central
+install:
+  coverity:
+    version: default
+serverUrl: https://poc322.polaris.synopsys.com

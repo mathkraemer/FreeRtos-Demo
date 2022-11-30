@@ -1,0 +1,20 @@
+# Coverity configuration file.
+# The schema is available here: <install-dir>/doc/configuration-schema.json
+
+# Specifies where the analysis results should be sent.
+commit:
+
+  # Coverity Connect configuration to use when committing defects to Coverity
+  # Connect.
+  connect:
+
+    # The authentication key file to use when authenticating to Coverity
+    # Connect to commit defects. By default, file located at
+    # $HOME/.coverity/ak-<hostname>-<port> is used.
+    auth-key-file: "C:\\Users\\mkraemer\\AppData\\Roaming\\Coverity\\authkeys\\ak-localhost-8080"
+
+    # The name of the stream to commit the results to.
+    stream: test
+
+    # Absolute URL of where to commit the Coverity Connect results.
+    url: http://localhost:8080
