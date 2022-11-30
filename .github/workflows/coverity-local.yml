@@ -45,7 +45,11 @@ jobs:
           CHANGESET_FILE: ${{ steps.changeset.outputs.added_modified }}
         shell: cmd
         run: |
+          echo ==================================================================
           echo %%CHANGESET_FILE%%
+          echo %CHANGESET_FILE%
+          echo ---------
+          type %CHANGESET_FILE%
           type %%CHANGESET_FILE%%
           echo ==================================================================
           pushd FreeRtos\Demo\WIN32-MSVC
