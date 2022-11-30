@@ -38,7 +38,7 @@ jobs:
         id: changeset
         uses: jitterbit/get-changed-files@v1
         with:
-          format: 'csv'
+          format: 'json'
 
 
       # Commands to perform changeset analysis
