@@ -42,17 +42,12 @@ jobs:
       - name: Synopsys Coverity Scan (Changeset Analysis)
         if: ${{ github.event_name == 'pull_request' }}
         env:
-          CHANGESET_FILE: ${{ steps.changeset.outputs.added_modified }}
+          CHANGESET_FILES: ${{ steps.changeset.outputs.added_modified }}
         shell: cmd
         run: |
-          echo ==================================================================
-          echo %%CHANGESET_FILE%%
-          echo %CHANGESET_FILE%
-          echo ---------
-          type %CHANGESET_FILE%
-          type %%CHANGESET_FILE%%
-          echo ==================================================================
+          echo Set of changed files: %CHANGESET_FILES%
           pushd FreeRtos\Demo\WIN32-MSVC
           echo cov-run-desktop --dir T:\GitHub\freertos-desktop-idir --setup
           echo cov-run-desktop --dir T:\GitHub\freertos-desktop-idir ../../Source/queue.c
+          cov-run-desktop --dir T:\GitHub\freertos-desktop-idir %CHANGESET_FILES%
 
