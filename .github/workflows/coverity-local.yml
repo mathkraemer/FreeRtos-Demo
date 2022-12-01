@@ -73,7 +73,6 @@ jobs:
              D:\\Tools\\GitHub\\freertos-desktop-idir\\output\\deviations-warnings.txt
 
 
-
       - name: Coverity Pull Request Feedback
         uses: synopsys-sig/coverity-report-output-v7-json@v0.1.1 
         with:
