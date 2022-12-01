@@ -57,7 +57,7 @@ jobs:
               --exit1-if-defects true ^
               --present-in-reference false @@changeset-files.lst
           python .github\workflows\patchstrippedfilepath.py
-          type coverity-results2.json
+          type coverity-results2.json 
 
       - name: Upload Analysis results
         uses: actions/upload-artifact@v3
