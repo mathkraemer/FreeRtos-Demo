@@ -84,7 +84,8 @@ jobs:
           coverity-password: ${{ secrets.COVERITY_PASSPHRASE }}
 
 
-       - name: Coverity Result Code
-         echo $COVERITY_EC
-         echo %COVERITY_EC%
-         echo --------------
+      - name: Coverity Result Code
+        shell: |
+           echo $COVERITY_EC
+           echo %COVERITY_EC%
+           echo --------------
