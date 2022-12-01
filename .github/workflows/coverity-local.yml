@@ -45,10 +45,8 @@ jobs:
           CHANGESET_FILES: ${{ steps.changeset.outputs.added_modified }}
         shell: cmd
         run: |
-          echo Set of changed files: %CHANGESET_FILES%
-          for %%f in (%CHANGESET_FILES%) do (
-            echo %%f
-          )
+          python .github\workflows\filefilter.py
+          dir
           pushd FreeRtos\Demo\WIN32-MSVC
           echo cov-run-desktop --dir T:\GitHub\freertos-desktop-idir --setup
           echo cov-run-desktop --dir T:\GitHub\freertos-desktop-idir ../../Source/queue.c
