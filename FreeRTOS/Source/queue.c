@@ -208,6 +208,11 @@ static void prvCopyDataFromQueue( Queue_t * const pxQueue, void * const pvBuffer
 	static BaseType_t prvNotifyQueueSetContainer( const Queue_t * const pxQueue, const BaseType_t xCopyPosition ) PRIVILEGED_FUNCTION;
 #endif
 
+static int bug1(){
+	int* ip;
+	return *ip;
+}
+
 /*
  * Called after a Queue_t structure has been allocated either statically or
  * dynamically to fill in the structure's members.
