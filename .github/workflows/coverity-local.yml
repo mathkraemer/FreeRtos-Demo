@@ -56,8 +56,6 @@ jobs:
               --ignore-uncapturable-inputs true ^
               --exit1-if-defects true ^
               --present-in-reference false @@changeset-files.lst
-          if %ErrorLevel% equ 0  (set COVERITY_EC=0) else (set COVERITY_EC=1)
-          echo Destkop-Run EC: %COVERITY_EC%
           python .github\workflows\patchstrippedfilepath.py 
 
       - name: Upload Analysis results
@@ -84,9 +82,3 @@ jobs:
           coverity-password: ${{ secrets.COVERITY_PASSPHRASE }}
 
 
-      - name: Coverity Result Code
-        shell: cmd
-        run: |
-           echo $COVERITY_EC
-           echo %COVERITY_EC%
-           echo --------------
