@@ -56,6 +56,7 @@ jobs:
               --ignore-uncapturable-inputs true ^
               --exit1-if-defects false ^
               --present-in-reference false @@changeset-files.lst
+          type coverity-results.json
 
       - name: Upload Analysis results
         uses: actions/upload-artifact@v3
