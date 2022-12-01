@@ -66,10 +66,10 @@ jobs:
           path: |
              coverity-results.json
              coverity-results2.json
-             t:\\GitHub\\freertos-desktop-idir\\output\\his-metrics.mandatory-required.html
-             t:\\GitHub\\freertos-desktop-idir\\output\\callgraph-metrics
-             t:\\GitHub\\freertos-desktop-idir\\output\\deviations.txt
-             t:\\GitHub\\freertos-desktop-idir\\output\\deviations-warnings.txt
+             D:\\Tools\\GitHub\\freertos-desktop-idir\\output\\his-metrics.mandatory-required.html
+             D:\\Tools\\GitHub\\freertos-desktop-idir\\output\\callgraph-metrics
+             D:\\Tools\\GitHub\\freertos-desktop-idir\\output\\deviations.txt
+             D:\\Tools\\GitHub\\freertos-desktop-idir\\output\\deviations-warnings.txt
 
 
 
