@@ -55,7 +55,7 @@ jobs:
               --strip-path %CD% --json-output-v7 coverity-results.json ^
               --ignore-uncapturable-inputs true ^
               --exit1-if-defects false ^
-              --present-in-reference false %CHANGESET_FILES%
+              --present-in-reference false @@changeset-files.lst
 
       - name: Coverity Pull Request Feedback
         uses: synopsys-sig/coverity-report-output-v7-json@v0.1.0 
