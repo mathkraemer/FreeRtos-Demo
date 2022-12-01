@@ -7,8 +7,8 @@ on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "main" ]
-#  pull_request:
-#    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -25,7 +25,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
+      # Baseline scanning
       - name: Synopsys Coverity Scan (Full Analysis)
         if: ${{ github.event_name != 'pull_request' }}
         shell: cmd
@@ -38,12 +38,48 @@ jobs:
         id: changeset
         uses: jitterbit/get-changed-files@v1
 
-      # Runs a set of commands using the runners shell
+      # Commands to perform changeset analysis  
       - name: Synopsys Coverity Scan (Changeset Analysis)
         if: ${{ github.event_name == 'pull_request' }}
+        env:
+          CHANGESET_FILES: ${{ steps.changeset.outputs.added_modified }}
+        shell: cmd
         run: |
-          echo ${{ steps.changeset.outputs.added_modified }}
-          type ${{ steps.changeset.outputs.added_modified }}
-          echo ==================================================================
-          cov-run-desktop --dir T:\GitHub\freertos-desktop-idir FreeRTOS/Source/tasks.c
+          python .github\workflows\filefilter.py
+          echo ------- PR Changeset -------
+          type changeset-files.lst
+          echo ----------------------------
+          rem pushd FreeRtos\Demo\WIN32-MSVC
+          cov-run-desktop --dir T:\GitHub\freertos-desktop-idir --setup
+          cov-run-desktop --dir T:\GitHub\freertos-desktop-idir ^
+              --strip-path %CD% --json-output-v7 coverity-results.json ^
+              --ignore-uncapturable-inputs true ^
+              --exit1-if-defects true ^
+              --present-in-reference false @@changeset-files.lst
+          python .github\workflows\patchstrippedfilepath.py 
+
+      - name: Upload Analysis results
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverity-results
+          path: |
+             coverity-results.json
+             coverity-results2.json
+             D:\\Tools\\GitHub\\freertos-desktop-idir\\output\\his-metrics.mandatory-required.html
+             D:\\Tools\\GitHub\\freertos-desktop-idir\\output\\callgraph-metrics
+             D:\\Tools\\GitHub\\freertos-desktop-idir\\output\\deviations.txt
+             D:\\Tools\\GitHub\\freertos-desktop-idir\\output\\deviations-warnings.txt
+
+
+      - name: Coverity Pull Request Feedback
+        uses: synopsys-sig/coverity-report-output-v7-json@v0.1.1
+        if: ${{ github.event_name == 'pull_request' }} 
+        with:
+          json-file-path: coverity-results2.json
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          coverity-url: http://localhost:8080
+          coverity-project-name: FreeRTOS Compliance
+          coverity-username: ${{ secrets.COV_USER }}
+          coverity-password: ${{ secrets.COVERITY_PASSPHRASE }}
+
 

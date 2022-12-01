@@ -36,6 +36,7 @@
 
 # Coverity idir
 **/idir
+**/data-coverity
 
 
 # Windows build dirs

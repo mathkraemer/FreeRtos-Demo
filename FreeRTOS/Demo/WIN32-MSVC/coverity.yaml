@@ -5,8 +5,7 @@ capture:
     cov-configure: [[--template, --compiler, arm-linux-gcc, --comptype, gcc]]
 
   build:
-    build-command: C:\PROGRA~1\MIB055~1\2022\Professional\MSBuild\Current\Bin\amd64\MSBuild.exe
-      /t:Rebuild WIN32.sln
+    build-command: C:\\PROGRA~1\\MIB055~1\\2022\\Professional\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe /t:Rebuild WIN32.sln
 commit:
   connect:
     stream: WIN32-MSVC
