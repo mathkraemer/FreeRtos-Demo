@@ -49,7 +49,8 @@ jobs:
           echo ------- PR Changeset -------
           type changeset-files.lst
           echo ----------------------------
-          pushd FreeRtos\Demo\WIN32-MSVC
-          cov-run-desktop --dir T:\GitHub\freertos-desktop-idir --setup
-          cov-run-desktop --dir T:\GitHub\freertos-desktop-idir @@changeset-files.lst
+          echo %PWD%
+          rem pushd FreeRtos\Demo\WIN32-MSVC
+          rem cov-run-desktop --dir T:\GitHub\freertos-desktop-idir --setup
+          rem cov-run-desktop --dir T:\GitHub\freertos-desktop-idir @@changeset-files.lst
 
