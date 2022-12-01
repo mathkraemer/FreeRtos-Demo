@@ -57,12 +57,13 @@ jobs:
               --exit1-if-defects true ^
               --present-in-reference false @@changeset-files.lst
           if %ErrorLevel% equ 0  (set COVERITY_EC = 0) else (set COVERITY_EC = 1)
+          echo Destkop-Run EC: %COVERITY_EC%
           python .github\workflows\patchstrippedfilepath.py 
 
       - name: Upload Analysis results
         uses: actions/upload-artifact@v3
         with:
-          name: pull-request-results
+          name: coverity-results
           path: |
              coverity-results.json
              coverity-results2.json
