@@ -85,7 +85,8 @@ jobs:
 
 
       - name: Coverity Result Code
-        shell: |
+        shell:
+        run: |
            echo $COVERITY_EC
            echo %COVERITY_EC%
            echo --------------
