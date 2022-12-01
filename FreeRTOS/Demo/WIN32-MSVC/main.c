@@ -134,7 +134,7 @@ static BaseType_t xTraceRunning = pdTRUE;
 
 int test2(int* ip){
 	if (ip == 0){
-		return *ip;
+	   return *ip;
 	}
 	return -1;
 }
