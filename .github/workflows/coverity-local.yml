@@ -72,7 +72,8 @@ jobs:
 
 
       - name: Coverity Pull Request Feedback
-        uses: synopsys-sig/coverity-report-output-v7-json@v0.1.1 
+        uses: synopsys-sig/coverity-report-output-v7-json@v0.1.1
+        if: ${{ github.event_name == 'pull_request' }} 
         with:
           json-file-path: coverity-results2.json
           github-token: ${{ secrets.GITHUB_TOKEN }}
