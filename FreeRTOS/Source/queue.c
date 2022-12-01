@@ -254,6 +254,7 @@ static void prvInitialiseNewQueue( const UBaseType_t uxQueueLength, const UBaseT
 	taskEXIT_CRITICAL()
 /*-----------------------------------------------------------*/
 
+
 BaseType_t xQueueGenericReset( QueueHandle_t xQueue, BaseType_t xNewQueue )
 {
 Queue_t * const pxQueue = xQueue;
