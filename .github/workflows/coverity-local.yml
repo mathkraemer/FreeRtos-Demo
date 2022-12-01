@@ -52,5 +52,7 @@ jobs:
           echo %PWD%
           rem pushd FreeRtos\Demo\WIN32-MSVC
           rem cov-run-desktop --dir T:\GitHub\freertos-desktop-idir --setup
-          rem cov-run-desktop --dir T:\GitHub\freertos-desktop-idir @@changeset-files.lst
+          rem cov-run-desktop --dir T:\GitHub\freertos-desktop-idir ^
+              --ignore-uncapturable-inputs true ^
+              --present-in-reference false @@changeset-files.lst
 
