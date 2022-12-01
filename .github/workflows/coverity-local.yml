@@ -54,7 +54,7 @@ jobs:
           cov-run-desktop --dir T:\GitHub\freertos-desktop-idir ^
               --strip-path %CD% --json-output-v7 coverity-results.json ^
               --ignore-uncapturable-inputs true ^
-              --exit1-if-defects false ^
+              --exit1-if-defects true ^
               --present-in-reference false @@changeset-files.lst
           python .github\workflows\patchstrippedfilepath.py
           type coverity-results2.json
