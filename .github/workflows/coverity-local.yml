@@ -56,8 +56,8 @@ jobs:
               --ignore-uncapturable-inputs true ^
               --exit1-if-defects true ^
               --present-in-reference false @@changeset-files.lst
-          python .github\workflows\patchstrippedfilepath.py
-          type coverity-results2.json 
+          if %ErrorLevel% equ 0  (set COVERITY_EC = 0) else (set COVERITY_EC = 1)
+          python .github\workflows\patchstrippedfilepath.py 
 
       - name: Upload Analysis results
         uses: actions/upload-artifact@v3
@@ -84,3 +84,7 @@ jobs:
           coverity-password: ${{ secrets.COVERITY_PASSPHRASE }}
 
 
+       - name: Coverity Result Code
+         echo $COVERITY_EC
+         echo %COVERITY_EC%
+         echo --------------
