@@ -133,10 +133,11 @@ StackType_t uxTimerTaskStack[ configTIMER_TASK_STACK_DEPTH ];
 static BaseType_t xTraceRunning = pdTRUE;
 
 int test(int* ip){
-	if (ip == 0)
+	if (ip == 0){
 		return *ip;
-	else
+	} else {
 		return 0;
+	}
 }
 
 /*-----------------------------------------------------------*/
