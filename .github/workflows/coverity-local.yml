@@ -57,6 +57,12 @@ jobs:
               --exit1-if-defects false ^
               --present-in-reference false @@changeset-files.lst
 
+      - name: Upload Analysis results
+        uses: actions/upload-artifact@v3
+        with:
+          name: json-results
+          path: coverity-results.json
+
       - name: Coverity Pull Request Feedback
         uses: synopsys-sig/coverity-report-output-v7-json@v0.1.0 
         with:
