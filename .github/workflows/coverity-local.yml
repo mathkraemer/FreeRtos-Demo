@@ -56,7 +56,7 @@ jobs:
               --ignore-uncapturable-inputs true ^
               --exit1-if-defects true ^
               --present-in-reference false @@changeset-files.lst
-          if %ErrorLevel% equ 0  (set COVERITY_EC = 0) else (set COVERITY_EC = 1)
+          rem if %ErrorLevel% equ 0  (set COVERITY_EC = 0) else (set COVERITY_EC = 1)
           python .github\workflows\patchstrippedfilepath.py 
 
       - name: Upload Analysis results
