@@ -46,9 +46,10 @@ jobs:
         shell: cmd
         run: |
           python .github\workflows\filefilter.py
-          dir
+          echo ------- PR Changeset -------
+          type changeset-files.lst
+          echo ----------------------------
           pushd FreeRtos\Demo\WIN32-MSVC
-          echo cov-run-desktop --dir T:\GitHub\freertos-desktop-idir --setup
-          echo cov-run-desktop --dir T:\GitHub\freertos-desktop-idir ../../Source/queue.c
-          echo cov-run-desktop --dir T:\GitHub\freertos-desktop-idir %CHANGESET_FILES%
+          cov-run-desktop --dir T:\GitHub\freertos-desktop-idir --setup
+          cov-run-desktop --dir T:\GitHub\freertos-desktop-idir @@changeset-files.lst
 
