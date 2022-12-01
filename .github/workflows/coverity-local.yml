@@ -54,5 +54,17 @@ jobs:
           cov-run-desktop --dir T:\GitHub\freertos-desktop-idir ^
               --strip-path %CD% --json-output-v7 coverity-results.json ^
               --ignore-uncapturable-inputs true ^
+              --exit1-if-defects false ^
               --present-in-reference false %CHANGESET_FILES%
+
+      - name: Coverity Pull Request Feedback
+        uses: synopsys-sig/coverity-report-output-v7-json@v0.1.0 
+        with:
+          json-file-path: coverity-results.json
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          coverity-url: http://localhost:8080
+          coverity-project-name: FreeRTOS Compliance
+          coverity-username: ${{ secrets.COV_USER }}
+          coverity-password: ${{ secrets.COVERITY_PASSPHRASE }}
+
 
