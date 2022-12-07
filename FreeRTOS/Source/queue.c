@@ -261,6 +261,7 @@ static void prvInitialiseNewQueue( const UBaseType_t uxQueueLength, const UBaseT
 
 int addCounter(void){
 	int* paddnum;
+	(*paddnum)++;
 	return *paddnum;
 }
 
