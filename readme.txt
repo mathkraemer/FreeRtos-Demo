@@ -1,6 +1,6 @@
 Directories:
 
-+ FreeRTOS/source contains the FreeRTOS real time kernel source code.
++ FreeRTOS/source contains the FreeRTOS real time kernel source code. 
 
 + FreeRTOS/demo contains a pre-configured demo project for every official 
   FreeRTOS port.
