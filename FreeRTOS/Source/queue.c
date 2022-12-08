@@ -265,6 +265,10 @@ int addCounter(void){
 	return *paddnum;
 }
 
+int incCounter(void){
+	
+}
+
 BaseType_t xQueueGenericReset( QueueHandle_t xQueue, BaseType_t xNewQueue )
 {
 Queue_t * const pxQueue = xQueue;
